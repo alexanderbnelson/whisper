@@ -1,0 +1,10 @@
+# local env files
+.env*
+!.env*.example
+
+#files
+/source/*
+
+/node_modules/
+
+.DS_Store
