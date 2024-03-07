@@ -8,9 +8,11 @@ const openai = new OpenAI({
 
 async function main() {
   const transcription = await openai.audio.transcriptions.create({
-    file: fs.createReadStream("/Users/alexnelson/Sites/whisper/source/New Recording 7.m4a"),
+    file: fs.createReadStream("/Users/alexnelson/Dropbox (Personal)/Department of Interest/Website/Stories/Mark Ritchie/ritchie-2.m4a"),
     model: "whisper-1",
+    maxBodyLength: 25 * 1024 * 1024,
   });
+  
 
   console.log(transcription.text);
 }
